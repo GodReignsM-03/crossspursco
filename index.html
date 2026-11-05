@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cross Spurs Co. | Signature Tee Preorder</title>
 <meta name="description" content="Cross Spurs Co. Signature Tee, first collection. Redeemed, Restored, Renewed. Preorders open through November 30.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Link preview card (texts, Instagram, Facebook). Update the URLs if the site address changes. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cross Spurs Co.">
+<meta property="og:title" content="Cross Spurs Co. | The Signature Tee">
+<meta property="og:description" content="The first run is here. Preorders close November 30.">
+<meta property="og:url" content="https://godreignsm-03.github.io/crossspursco/">
+<meta property="og:image" content="https://godreignsm-03.github.io/crossspursco/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cross Spurs Co. cross mark logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14110e"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -43,7 +54,7 @@
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
   .brand img{height:50px;width:auto}
   /* Temporary: the cts mark cropped from the shirt-back mockup. A real images/logo.png replaces it automatically. */
-  .mark{display:block;width:63px;height:50px;background:var(--mock) -194px -40px/306px 306px no-repeat;mix-blend-mode:multiply;filter:grayscale(.15) brightness(1.18) contrast(1.9)}
+  .mark{display:block;width:63px;height:50px;background:url("images/mockups.jpg") -194px -40px/306px 306px no-repeat;mix-blend-mode:multiply;filter:grayscale(.15) brightness(1.18) contrast(1.9)}
   .wordmark{font-family:var(--slab);font-weight:700;font-size:23px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
   header .wordmark{color:var(--saddle);font-size:26px}
   header nav a{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:#6b5f50}
@@ -69,7 +80,7 @@
   .hero p.lede{max-width:480px;margin:0;color:var(--dim);font-size:17.5px}
   .hero .mission-line{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:14.5px;color:var(--cream)}
   .hero .mission-line:before{content:"";width:22px;height:1px;background:var(--tan)}
-  .hero-img{background:var(--mock) 100% 0%/200% 200% no-repeat;position:relative}
+  .hero-img{background:url("images/mockups.jpg") 100% 0%/200% 200% no-repeat;position:relative}
   .hero-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(20,17,14,0) 22%)}
 
   .countdown{display:flex;gap:10px;margin-top:34px}
@@ -91,7 +102,8 @@
   /* products */
   .products{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
   .card{background:#fff;border:1px solid var(--cream-line);display:flex;flex-direction:column}
-  .media{aspect-ratio:1/1;background-image:var(--mock);background-size:200% 200%;background-repeat:no-repeat;position:relative;transition:background-position .0s}
+  @supports not (aspect-ratio:1/1){ .media{height:0;padding-top:100%} }
+  .media{aspect-ratio:1/1;background-image:url("images/mockups.jpg");background-size:200% 200%;background-repeat:no-repeat;position:relative;transition:background-position .0s}
   .tag{position:absolute;top:14px;left:14px;background:var(--ink);color:var(--cream);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px}
   .views{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;background:rgba(20,17,14,.82);padding:3px;gap:3px}
   .views button{all:unset;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding:6px 14px}
@@ -176,6 +188,7 @@
     .hero-text{padding:36px 20px 64px}
     .products,.story,.mission{grid-template-columns:1fr}
     .mission-img{min-height:0;aspect-ratio:1/1}
+    @supports not (aspect-ratio:1/1){ .hero-img{height:0;padding-top:100%} }
     .mission-body{padding:36px 26px}
     .steps{grid-template-columns:1fr}
     header nav{display:none}
