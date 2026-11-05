@@ -1,11 +1,11 @@
 // Cross Spurs Co. — product + Square checkout link data, shared by index.html and checkout.html.
-// SHIP links: $25 + $6 shipping (Square collects the address). PICKUP links: $25, local pickup in Mission, TX.
+// SHIP links: $25 + $6 shipping (Square collects the address). PICKUP links: $25, local pickup in McAllen or Edinburg, TX.
 // Never edit a Square link's shipping fee in Square; recreate the link and paste the new URL here.
 window.PRODUCTS = {
   deadline: "2026-11-30T23:59:00-06:00",   // Nov 30, 11:59 PM Central
   price: 25,
   shippingFee: 6,
-  pickupPlace: "Mission, TX",
+  pickupPlace: "McAllen or Edinburg, TX",
   items: {
     men: {
       name: "Men's Signature Tee", colorway: "Natural / Saddle Brown",
