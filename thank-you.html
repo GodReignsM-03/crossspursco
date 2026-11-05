@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross Spurs Co. | Order Confirmed</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14110e; --ink-2:#1c1814; --line:#352e27;
+    --cream:#f2ece1; --cream-line:#d6cab6; --dim:#b9ad9b;
+    --saddle:#7a4a2a; --saddle-hi:#94603a; --tan:#b07d52;
+    --slab:"Zilla Slab", Rockwell, Georgia, serif;
+    --sans:"Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+    --mock:url("images/mockups.webp");
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--tan)}
+
+  header{background:var(--cream);border-bottom:1px solid var(--cream-line)}
+  header .bar{display:flex;justify-content:center;align-items:center;height:78px}
+  .brand img{height:50px;width:auto;display:block}
+  .mark{display:block;width:63px;height:50px;background:var(--mock) -194px -40px/306px 306px no-repeat;mix-blend-mode:multiply;filter:grayscale(.15) brightness(1.18) contrast(1.9)}
+
+  .hero{text-align:center;padding:80px 0 56px}
+  .check{width:64px;height:64px;border:1px solid var(--tan);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 26px}
+  h1{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(44px,8vw,72px);line-height:1;margin:14px 0 18px;letter-spacing:.01em}
+  .lede{color:var(--dim);font-size:18px;max-width:520px;margin:0 auto}
+  .lede strong{color:var(--cream);font-weight:600}
+
+  .word{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:52px 0 56px;margin:0 0 48px;text-align:center}
+  .word h2{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(30px,5vw,42px);line-height:1.05;letter-spacing:.02em;margin:12px 0 24px}
+  .word p{color:#d6ccbd;font-size:17px;max-width:600px;margin:0 auto 16px}
+  .word blockquote{max-width:600px;margin:32px auto 0;padding:28px 30px;background:var(--ink-2);border-left:3px solid var(--tan);text-align:left;font-family:var(--slab);font-weight:600;font-size:20px;line-height:1.45}
+  .word cite{display:block;margin-top:12px;font-family:var(--sans);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tan)}
+  .sc{font-variant:small-caps;text-transform:lowercase;font-variant-caps:small-caps}
+  .card{background:var(--ink-2);border:1px solid var(--line);padding:34px 32px;margin-bottom:24px}
+  .card h2{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:24px;letter-spacing:.03em;margin:8px 0 20px}
+  ol{list-style:none;margin:0;padding:0;counter-reset:s}
+  ol li{position:relative;padding:0 0 18px 52px;color:var(--dim)}
+  ol li:last-child{padding-bottom:0}
+  ol li:before{counter-increment:s;content:"0" counter(s);position:absolute;left:0;top:-4px;font-family:var(--slab);font-weight:700;font-size:26px;color:var(--tan)}
+  ol li b{display:block;color:var(--cream);font-weight:600}
+
+  .mission{background:var(--cream);color:var(--ink);border-color:var(--cream-line)}
+  .mission .eyebrow{color:var(--saddle)}
+  .mission p{margin:0;color:#4f453a}
+  .mission blockquote{margin:22px 0 0;padding:0 0 0 16px;border-left:3px solid var(--saddle);font-family:var(--slab);font-weight:600;font-size:19px;line-height:1.4;color:var(--ink)}
+  .mission cite{display:block;margin-top:8px;font-family:var(--sans);font-style:normal;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--saddle)}
+
+  .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:40px 0 0}
+  .btn{display:inline-block;padding:15px 30px;background:var(--saddle);color:var(--cream);font-weight:600;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--saddle);text-align:center;cursor:pointer;font-family:var(--sans)}
+  .btn:hover{background:var(--saddle-hi);border-color:var(--saddle-hi)}
+  .btn.ghost{background:transparent;border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--tan)}
+  .help{text-align:center;color:var(--dim);font-size:14px;margin:30px 0 0}
+
+  footer{border-top:1px solid var(--line);margin-top:80px;padding:36px 0;text-align:center;color:var(--dim);font-size:13px}
+  footer .wordmark{font-family:var(--slab);font-weight:700;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);margin-bottom:6px}
+
+  @media (max-width:480px){
+    .wrap{padding:0 16px}
+    .hero{padding:56px 0 40px}
+    .card{padding:26px 20px}
+    .word{padding:40px 0 44px}
+    .word p{font-size:16px;text-align:left}
+    .word blockquote{font-size:18px;padding:22px 20px}
+    .actions .btn{flex:1;padding:15px 10px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="index.html" class="brand" aria-label="Cross Spurs Co. home"><img src="images/logo.png" alt="Cross Spurs Co." onload="this.nextElementSibling.remove()" onerror="this.remove()"><span class="mark" role="img" aria-label="Cross Spurs Co."></span></a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="check" aria-hidden="true">
+      <svg width="26" height="20" viewBox="0 0 26 20" fill="none"><path d="M2 10.5 9 17.5 24 2.5" stroke="#b07d52" stroke-width="2.2"/></svg>
+    </div>
+    <div class="eyebrow">Order Confirmed</div>
+    <h1>Thank You</h1>
+    <p class="lede">Your preorder is in. <strong>Square is emailing your receipt now.</strong> Keep it, because it's your order confirmation.</p>
+  </div>
+
+  <section class="word">
+    <div class="eyebrow">A Word Before You Go</div>
+    <h2>Keep walking it out.</h2>
+    <p>Following Christ isn't something you put on for Sunday. It's a daily walk, on the easy days and the hard ones. Keep showing up. He's with you every step.</p>
+    <blockquote>“Be strong and of good courage… for the <span class="sc">Lord</span> your God is with you wherever you go.”<cite>Joshua 1:9 NKJV</cite></blockquote>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">What Happens Next</div>
+    <h2>From here to your hands</h2>
+    <ol>
+      <li><b>Preorders close November 30</b>Nothing for you to do until then.</li>
+      <li><b>We print the full run</b>Every shirt is made for someone who ordered it, including yours.</li>
+      <li><b>You'll get an email with your date</b>We'll let you know when your order ships or is ready for local pickup.</li>
+    </ol>
+  </section>
+
+  <section class="card mission">
+    <div class="eyebrow">Thank You for Being Part of This</div>
+    <p style="margin-top:10px">Your order helps fund and prepare for my mission trip to Kenya in March 2027. Thank you for being part of this from the very first run.</p>
+  </section>
+
+  <div class="actions">
+    <button class="btn" id="share" type="button">Share with a Friend</button>
+    <a class="btn ghost" href="index.html">Back to the Shop</a>
+  </div>
+
+  <p class="help">Questions about your order? Email <a id="email" href="mailto:aldovjr03@gmail.com">aldovjr03@gmail.com</a> with the name on your order.</p>
+</main>
+
+<footer>
+  <div class="wordmark">Cross Spurs Co.</div>
+  <div>© 2026 Cross Spurs Co.</div>
+</footer>
+
+<script>
+  // Share: uses the phone's share sheet when available, otherwise copies the shop link.
+  (function(){
+    var btn = document.getElementById("share");
+    var shopUrl = new URL("index.html", location.href).href;
+    btn.addEventListener("click", function(){
+      var data = { title: "Cross Spurs Co. Signature Tee", text: "Preorders for the Cross Spurs Co. Signature Tee are open through Nov 30.", url: shopUrl };
+      if (navigator.share) { navigator.share(data).catch(function(){}); return; }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shopUrl).then(function(){ btn.textContent = "Link Copied"; setTimeout(function(){ btn.textContent = "Share with a Friend"; }, 2000); });
+      }
+    });
+  })();
+</script>
+</body>
+</html>

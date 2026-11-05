@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cross Spurs Co. | Signature Tee Preorder</title>
+<meta name="description" content="Cross Spurs Co. Signature Tee, first collection. Redeemed, Restored, Renewed. Preorders open through November 30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14110e;          /* black tee */
+    --ink-2:#1c1814;
+    --line:#352e27;
+    --cream:#f2ece1;        /* natural tee */
+    --cream-2:#e8dfd0;
+    --cream-line:#d6cab6;
+    --dim:#b9ad9b;
+    --saddle:#7a4a2a;       /* brown print */
+    --saddle-hi:#94603a;
+    --tan:#b07d52;          /* leather tan: brown accent that reads on dark */
+    --tan-hi:#c79563;
+    --slab:"Zilla Slab", Rockwell, Georgia, serif;
+    --sans:"Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+    --mock:url("images/mockups.webp");
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--tan)}
+  .slab{font-family:var(--slab);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+
+  /* top notice */
+  .notice{background:var(--saddle);color:var(--cream);text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px}
+
+  /* header */
+  header{background:var(--cream);border-bottom:1px solid var(--cream-line)}
+  .hdr{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:78px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand img{height:50px;width:auto}
+  /* Temporary: the cts mark cropped from the shirt-back mockup. A real images/logo.png replaces it automatically. */
+  .mark{display:block;width:63px;height:50px;background:var(--mock) -194px -40px/306px 306px no-repeat;mix-blend-mode:multiply;filter:grayscale(.15) brightness(1.18) contrast(1.9)}
+  .wordmark{font-family:var(--slab);font-weight:700;font-size:23px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+  header .wordmark{color:var(--saddle);font-size:26px}
+  header nav a{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:#6b5f50}
+  header nav a:hover{color:var(--saddle)}
+  header nav.l a{margin-right:28px}
+  header nav.r{justify-self:end}
+  header nav.r a{margin-left:28px}
+
+  /* buttons */
+  .btn{display:inline-block;padding:15px 32px;background:var(--saddle);color:var(--cream);font-weight:600;font-size:13.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid var(--saddle);transition:background .2s,border-color .2s,color .2s;text-align:center}
+  .btn:hover{background:var(--saddle-hi);border-color:var(--saddle-hi)}
+  .btn.brown{background:var(--saddle);border-color:var(--saddle);color:var(--cream)}
+  .btn.brown:hover{background:var(--saddle-hi);border-color:var(--saddle-hi)}
+  .btn.ghost{background:transparent;color:var(--cream);border-color:var(--line)}
+  .btn.ghost:hover{border-color:var(--tan);color:var(--tan-hi)}
+  .btn[aria-disabled="true"]{background:transparent!important;color:#9a8f80!important;border-color:currentColor!important;pointer-events:none;opacity:.8}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:620px}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:72px 56px 72px max(20px, calc((100vw - 1140px)/2 + 20px))}
+  .hero h1{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(46px,6.4vw,84px);line-height:.98;letter-spacing:.01em;margin:16px 0 18px}
+  .hero .tagline{font-family:var(--slab);font-weight:600;font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:var(--tan);margin-bottom:22px}
+  .hero p.lede{max-width:480px;margin:0;color:var(--dim);font-size:17.5px}
+  .hero .mission-line{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:14.5px;color:var(--cream)}
+  .hero .mission-line:before{content:"";width:22px;height:1px;background:var(--tan)}
+  .hero-img{background:var(--mock) 100% 0%/200% 200% no-repeat;position:relative}
+  .hero-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(20,17,14,0) 22%)}
+
+  .countdown{display:flex;gap:10px;margin-top:34px}
+  .cd{min-width:74px;padding:12px 8px;border:1px solid var(--line);background:var(--ink-2);text-align:center}
+  .cd b{display:block;font-family:var(--slab);font-size:34px;font-weight:700;line-height:1}
+  .cd small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  .cd-label{display:block;margin-top:10px;font-size:13px;color:var(--dim)}
+  .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+  section{padding:88px 0}
+  .sec-head{text-align:center;margin-bottom:48px}
+  .sec-head h2{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(32px,4.6vw,48px);margin:10px 0 0;line-height:1.05;letter-spacing:.02em}
+
+  /* light sections */
+  .light{background:var(--cream);color:var(--ink)}
+  .light .eyebrow{color:var(--saddle)}
+  .light .dim{color:#6b5f50}
+
+  /* products */
+  .products{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+  .card{background:#fff;border:1px solid var(--cream-line);display:flex;flex-direction:column}
+  .media{aspect-ratio:1/1;background-image:var(--mock);background-size:200% 200%;background-repeat:no-repeat;position:relative;transition:background-position .0s}
+  .tag{position:absolute;top:14px;left:14px;background:var(--ink);color:var(--cream);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px}
+  .views{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;background:rgba(20,17,14,.82);padding:3px;gap:3px}
+  .views button{all:unset;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding:6px 14px}
+  .views button[aria-pressed="true"]{background:var(--cream);color:var(--ink)}
+  .views button:focus-visible{outline:2px solid var(--tan)}
+  .card-body{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1}
+  .card-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .card-body h3{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:24px;margin:0;line-height:1.15;letter-spacing:.02em}
+  .price{font-family:var(--slab);font-size:26px;font-weight:700}
+  .colorway{display:flex;align-items:center;gap:10px;margin:8px 0 16px;font-size:14px;color:#6b5f50}
+  .sw{display:inline-flex}
+  .sw i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.18);margin-right:-4px}
+  .colorway{margin-bottom:4px!important}
+  .fit{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--saddle);margin:0 0 16px}
+  .sizes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+  .size-label{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6b5f50;margin-bottom:8px}
+  .sizes button{all:unset;box-sizing:border-box;cursor:pointer;min-width:48px;height:42px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;border:1px solid var(--cream-line);color:#5d5246;background:#fff;transition:border-color .15s,background .15s,color .15s}
+  .sizes button:hover{border-color:var(--saddle);color:var(--saddle)}
+  .sizes button[aria-checked="true"]{background:var(--saddle);border-color:var(--saddle);color:var(--cream)}
+  .sizes button:focus-visible{outline:2px solid var(--saddle);outline-offset:2px}
+  .card-body .btn{margin-top:auto}
+  .secure{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:24px;font-size:13px;color:#6b5f50;text-align:center}
+
+  /* specs */
+  .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .spec{background:var(--ink);padding:26px 22px}
+  .spec small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tan);margin-bottom:6px}
+  .spec p{margin:0;font-size:15px}
+  section.tight{padding:0 0 88px}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+  .step{padding:28px 24px;border:1px solid var(--line);background:var(--ink-2)}
+  .step:before{counter-increment:s;content:"0" counter(s);font-family:var(--slab);font-weight:700;font-size:40px;color:var(--tan);display:block;line-height:1;margin-bottom:12px}
+  .step h4{margin:0 0 6px;font-size:17px;font-weight:600}
+  .step p{margin:0;color:var(--dim);font-size:15px}
+
+  /* mission */
+  .mission{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--cream-line);background:#fff}
+  .mission-img{background:var(--ink);min-height:420px;position:relative;display:flex;align-items:center;justify-content:center}
+  .mission-verse{padding:48px 44px;text-align:center;color:var(--cream)}
+  .mv-place{font-size:11.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--tan);margin-bottom:22px}
+  .mission-verse p{font-family:var(--slab);font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.3;margin:0 auto;max-width:400px}
+  .mission-verse cite{display:block;margin-top:20px;font-style:normal;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tan)}
+  .mission-verse:before{content:"";display:block;width:1px;height:44px;background:var(--tan);margin:0 auto 22px}
+  .mission-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .slot{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8a7d6c;border:1px dashed #b9ab95;padding:14px 18px;text-align:center;line-height:1.8}
+  .slot-text{font-style:italic;opacity:.75}
+  .mission-body{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+  .mission-body h2{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(30px,4vw,42px);line-height:1.05;margin:10px 0 16px}
+  .mission-body p{margin:0 0 14px;color:#4f453a}
+  .pledge{font-family:var(--slab);font-weight:700;font-size:20px;color:var(--saddle);border-left:3px solid var(--saddle);padding:4px 0 4px 14px;margin:6px 0 18px}
+  .mission-body .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+  .fine{font-size:12.5px;color:#8a7d6c;margin-top:16px!important}
+
+  /* story */
+  .story{max-width:720px}
+  .story p{font-size:17px;color:#d6ccbd}
+  .story blockquote.verse{margin:34px 0 0;padding:26px 30px;font-family:var(--slab);font-weight:600;font-size:22px;line-height:1.45;text-transform:none;letter-spacing:0}
+  .verse cite{display:block;margin-top:12px;font-family:var(--sans);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--tan)}
+  .story h2{font-family:var(--slab);font-weight:700;text-transform:uppercase;font-size:clamp(32px,4.6vw,48px);line-height:1.05;margin:10px 0 18px}
+  .story p{color:var(--dim);margin:0 0 14px}
+  .story blockquote{margin:0;padding:36px;border-left:3px solid var(--tan);background:var(--ink-2);font-family:var(--slab);font-weight:600;font-size:26px;line-height:1.35;text-transform:uppercase;letter-spacing:.06em}
+
+  /* faq */
+  .faq{max-width:760px;margin:0 auto}
+  details{border-bottom:1px solid var(--line);padding:20px 0}
+  summary{cursor:pointer;list-style:none;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";color:var(--tan);font-size:22px;line-height:1}
+  details[open] summary:after{content:"\2013"}
+  details p{color:var(--dim);margin:12px 0 0}
+
+  footer{border-top:1px solid var(--line);padding:44px 0;text-align:center;color:var(--dim);font-size:13px}
+  footer .wordmark{font-size:20px;display:inline-block;margin-bottom:8px;color:var(--cream)}
+  .divider{border-top:1px solid var(--line)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;min-height:0}
+    .hero-img{order:-1;aspect-ratio:1/1}
+    .hero-img:after{background:linear-gradient(0deg,var(--ink) 0%,rgba(20,17,14,0) 30%)}
+    .hero-text{padding:36px 20px 64px}
+    .products,.story,.mission{grid-template-columns:1fr}
+    .mission-img{min-height:0;aspect-ratio:1/1}
+    .mission-body{padding:36px 26px}
+    .steps{grid-template-columns:1fr}
+    header nav{display:none}
+    .hdr{grid-template-columns:1fr;justify-items:center;height:70px}
+  }
+  @media (max-width:480px){
+    .wrap{padding:0 16px}
+    .hero-text{padding:28px 16px 56px}
+    section{padding:64px 0}
+    section.tight{padding:0 0 64px}
+    .cd{min-width:0;flex:1;padding:10px 4px}
+    .cd b{font-size:28px}
+    .countdown{gap:6px}
+    .hero .ctas .btn{flex:1;padding:15px 10px;white-space:nowrap}
+    .specs{grid-template-columns:1fr}
+    .card-body{padding:20px 18px 24px}
+    .sizes{flex-wrap:nowrap;gap:5px}
+    .sizes button{min-width:0;flex:1;padding:0 2px;font-size:12.5px}
+    .story blockquote.verse{font-size:19px;padding:22px}
+  }
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+  EDIT HERE: everything you'll need to change lives in this CONFIG block.
+  - Products, sizes and all Square checkout links live in products.js.
+    The buyer picks a size here, then checkout.html asks Ship or Pickup and hands off to Square.
+  - No ship date or shipping fee appears on the page until you have real numbers.
+  - missionPledge: leave it empty until you've picked a real amount from your
+    cost quote. When it's empty, that line is hidden.
+  - donateLink: your GoFundMe link. When it's empty, the Donate button is hidden.
+====================================================================== -->
+<script src="products.js"></script>
+<script>
+const CONFIG = {
+  deadline: PRODUCTS.deadline,
+  contactEmail: "aldovjr03@gmail.com",      // swap for a brand inbox later
+  heroLine: "",                             // short line under the tagline, in your own words. Hidden while empty.
+  missionPledge: "",                        // e.g. "$5 from every shirt goes straight to the trip." DECIDE BEFORE LAUNCH
+  donateLink: "",                           // GoFundMe URL
+  products: Object.entries(PRODUCTS.items).map(([key, p]) => Object.assign({ key }, p))
+};
+</script>
+
+<div class="notice" id="notice">First run · Preorders close Nov 30 · Helping fund and prepare for a mission trip to Kenya</div>
+
+<header>
+  <div class="wrap hdr">
+    <nav class="l"><a href="#shop">Preorder</a><a href="#mission">The Mission</a></nav>
+    <!-- Logo: put a transparent PNG of the brown cts mark at images/logo.png and it shows up automatically. -->
+    <a href="#" class="brand" aria-label="Cross Spurs Co. home"><img src="images/logo.png" alt="Cross Spurs Co." onload="this.nextElementSibling.remove()" onerror="this.remove()"><span class="mark" role="img" aria-label="Cross Spurs Co."></span></a>
+    <nav class="r"><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">The First Collection</div>
+    <h1>The Signature Tee</h1>
+    <div class="tagline">Redeemed · Restored · Renewed</div>
+    <p class="lede" id="heroLine" hidden></p>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="cd"><b id="d">--</b><small>Days</small></div>
+      <div class="cd"><b id="h">--</b><small>Hours</small></div>
+      <div class="cd"><b id="m">--</b><small>Min</small></div>
+      <div class="cd"><b id="s">--</b><small>Sec</small></div>
+    </div>
+    <span class="cd-label" id="cd-label">until preorders close</span>
+    <div class="ctas">
+      <a href="#shop" class="btn">Preorder · $25</a>
+      <a href="#mission" class="btn ghost">The Mission</a>
+    </div>
+  </div>
+  <div class="hero-img" role="img" aria-label="Back of the Natural Signature Tee: Cross Spurs Co., Redeemed, Restored, Renewed"></div>
+</div>
+
+<section id="shop" class="light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Preorder Now</div>
+      <h2>Pick your colorway</h2>
+    </div>
+    <div class="products" id="products"></div>
+    <div class="secure">
+      <svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true"><rect x="1" y="7" width="12" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M4 7V4.5a3 3 0 0 1 6 0V7" stroke="currentColor" stroke-width="1.4"/></svg>
+      Secure checkout by Square · Card, Apple Pay, Google Pay, Cash App Pay
+    </div>
+  </div>
+</section>
+
+<section class="tight" style="padding-top:88px">
+  <div class="wrap">
+    <div class="specs">
+      <div class="spec"><small>Fit</small><p>Unisex classic fit</p></div>
+      <div class="spec"><small>Print</small><p>Left chest + full back</p></div>
+      <div class="spec"><small>Price</small><p>$25 · paid in full at preorder</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How the Preorder Works</div>
+      <h2>Ordered. Printed. Delivered.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h4>Reserve your shirt</h4><p>Pick your colorway and size and check out securely through Square. You'll get a receipt by email right away.</p></div>
+      <div class="step"><h4>Preorders close Nov 30</h4><p>We print the full run once preorders close, so every shirt is made for someone who's waiting on it.</p></div>
+      <div class="step"><h4>Ship or pick up</h4><p>Once the run is printed, you'll get an email when your order ships or is ready for pickup. Choose shipping or local pickup at checkout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="mission" class="light">
+  <div class="wrap">
+    <div class="mission">
+      <!-- Optional: save a photo as images/mission.jpg (e.g. from the mission org, with permission) and it covers this panel automatically. -->
+      <div class="mission-img">
+        <div class="mission-verse">
+          <div class="mv-place">Utawala, Kenya · March 2027</div>
+          <p>“Go therefore and make disciples of all the nations…”</p>
+          <cite>Matthew 28:19 NKJV</cite>
+        </div>
+        <img src="images/mission.jpg" alt="Mission trip to Kenya" onerror="this.remove()">
+      </div>
+      <div class="mission-body">
+        <div class="eyebrow">The Mission</div>
+        <h2>Kenya · March 2027</h2>
+        <p>In March 2027, I'm traveling to Kenya with a team partnering with trusted Christian leaders there. We'll be serving Utawala and the neighboring villages through evangelism, church ministry, humanitarian outreach and leadership development, ministering to men, women, teenagers and children.</p>
+        <p>The bigger goal is to strengthen the local churches and leaders we serve alongside, so the ministry keeps going long after our team comes home. Our Kenyan partners often bring several churches and communities together, so we're preparing to serve everyone from kids to pastors.</p>
+        <p>This first run of Cross Spurs Co. shirts helps fund and prepare for this trip.</p>
+        <div class="pledge" id="pledge" hidden></div>
+        <p>If you'd like to support the trip without buying a shirt, you can give directly.</p>
+        <div class="btns">
+          <a href="#shop" class="btn brown">Preorder a Shirt</a>
+          <a href="#" id="donate" class="btn ghost" style="color:var(--ink);border-color:var(--cream-line)" target="_blank" rel="noopener" hidden>Donate to the Trip</a>
+        </div>
+        <p class="fine">Shirt purchases are product sales, not tax-deductible donations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <div class="eyebrow">My Why</div>
+    <h2>Let your light so shine.</h2>
+    <p>I am so excited to be on this journey with every single one of y'all. For the past couple of months I have had Cross Spurs Co. on my heart. I wanted to create a brand that showed my faith and showed my country roots and the life I live.</p>
+    <p>I recently came back to the Lord after being very lukewarm and blinded for the past couple of years, and now I just want to continue to walk the calling God has for me.</p>
+    <p>The goal for this brand is to be able to be a light to those around us and share the love of Christ that is in us, all while showing our love for the western industry. I believe God is going to move mountains in this business and use it to start conversations and plant seeds all around us.</p>
+    <p>I can't wait to bring y'all along for the journey.</p>
+    <blockquote class="verse">“Let your light so shine before men, that they may see your good works and glorify your Father in heaven.”<cite>Matthew 5:16 NKJV</cite></blockquote>
+  </div>
+</section>
+
+<section id="faq" class="divider">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Questions</div>
+      <h2>Good to know</h2>
+    </div>
+    <div class="faq">
+      <details><summary>When will my shirt arrive?</summary><p>Preorders close November 30, and printing starts after that. You'll get an email with your ship or pickup date as soon as it's set. If your order is ever delayed, we'll let you know right away, and you can choose a full refund instead of waiting.</p></details>
+      <details><summary>How much is shipping?</summary><p>$6 flat shipping anywhere in the U.S. Local pickup in Mission, TX is free. You'll choose shipping or local pickup at checkout. If you pick up, we'll contact you to set a time.</p></details>
+      <details><summary>How does sizing run?</summary><p>Both tees are the same unisex classic fit, which runs like standard men's sizing. Men: order your usual size. Women: most size down one from your usual women's size for a closer fit, or keep your usual size for a relaxed, oversized look.</p></details>
+      <details><summary>Will my shirt look exactly like the photos?</summary><p>The photos are mockups of the final design. Fabric texture and print color can look slightly different in person and from screen to screen.</p></details>
+      <details><summary>How does my purchase support the mission trip?</summary><p>This first run helps fund and prepare for my mission trip to Kenya in March 2027. <span id="faq-pledge"></span>Shirt purchases aren't tax-deductible donations.</p></details>
+      <details><summary>Can I cancel or get a refund?</summary><p>Yes. You can cancel for a full refund any time before preorders close on November 30. After that your shirt goes into production. If your order is delayed, you can still choose a full refund.</p></details>
+      <details><summary>Is checkout secure?</summary><p>Yes. Payment runs through Square's secure checkout. We never see or store your card details.</p></details>
+      <details><summary>Questions about my order?</summary><p>Email <a class="js-email" href="#"></a> with the name on your order and we'll take care of you.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wordmark">Cross Spurs Co.</div>
+  <div style="margin-top:8px">© 2026 Cross Spurs Co. · <a class="js-email" href="#"></a></div>
+</footer>
+
+<script>
+(function(){
+  const deadline = new Date(CONFIG.deadline).getTime();
+  const isClosed = () => Date.now() >= deadline;
+  const $$ = s => document.querySelectorAll(s);
+
+  $$(".js-email").forEach(e => { e.textContent = CONFIG.contactEmail; e.href = "mailto:" + CONFIG.contactEmail; });
+
+  if (CONFIG.heroLine){
+    const h = document.getElementById("heroLine"); h.textContent = CONFIG.heroLine; h.hidden = false;
+  }
+  if (CONFIG.missionPledge){
+    const p = document.getElementById("pledge"); p.textContent = CONFIG.missionPledge; p.hidden = false;
+    document.getElementById("faq-pledge").textContent = CONFIG.missionPledge + " ";
+  }
+  if (CONFIG.donateLink){
+    const d = document.getElementById("donate"); d.href = CONFIG.donateLink; d.hidden = false;
+  }
+
+  const sizes = ["S","M","L","XL","2XL","3XL"];
+  const updaters = [];
+  const grid = document.getElementById("products");
+  CONFIG.products.forEach(p => {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="media" role="img" aria-label="${p.name}, ${p.colorway}, front" style="background-position:${p.front}">
+        <span class="tag">Preorder</span>
+        <div class="views">
+          <button type="button" aria-pressed="true" data-pos="${p.front}" data-v="front">Front</button>
+          <button type="button" aria-pressed="false" data-pos="${p.back}" data-v="back">Back</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h3>${p.name}</h3><div class="price">$25</div></div>
+        <div class="colorway"><span class="sw">${p.swatch.map(c=>`<i style="background:${c}"></i>`).join("")}</span>&nbsp;${p.colorway}</div>
+        <div class="fit">${p.fit}</div>
+        <div class="size-label">Size</div>
+        <div class="sizes" role="radiogroup" aria-label="Size for ${p.name}">${sizes.map(s=>`<button type="button" role="radio" aria-checked="false" data-size="${s}">${s}</button>`).join("")}</div>
+        <a class="btn buy ${p.btn}" href="#">Select a Size</a>
+      </div>`;
+    const buy = card.querySelector(".buy");
+    const update = () => {
+      const s = card.dataset.size;
+      if (isClosed()) { buy.textContent = "Preorders Closed"; buy.setAttribute("aria-disabled","true"); buy.href = "#"; }
+      else if (!s) { buy.textContent = "Select a Size"; buy.setAttribute("aria-disabled","true"); buy.href = "#"; }
+      else { buy.textContent = "Preorder"; buy.removeAttribute("aria-disabled"); buy.href = `checkout.html?item=${p.key}&size=${encodeURIComponent(s)}`; }
+    };
+    updaters.push(update);
+    card.querySelectorAll(".sizes button").forEach(b => b.addEventListener("click", () => {
+      card.dataset.size = b.dataset.size;
+      card.querySelectorAll(".sizes button").forEach(x => x.setAttribute("aria-checked", x === b));
+      update();
+    }));
+    const media = card.querySelector(".media");
+    card.querySelectorAll(".views button").forEach(b => b.addEventListener("click", () => {
+      media.style.backgroundPosition = b.dataset.pos;
+      media.setAttribute("aria-label", `${p.name}, ${p.colorway}, ${b.dataset.v}`);
+      card.querySelectorAll(".views button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    }));
+    grid.appendChild(card);
+  });
+
+  function setButtons(){ updaters.forEach(u => u()); }
+
+  const pad = n => String(n).padStart(2,"0");
+  function tick(){
+    let ms = deadline - Date.now();
+    if (ms <= 0){
+      ["d","h","m","s"].forEach(id => document.getElementById(id).textContent = "00");
+      document.getElementById("cd-label").textContent = "Preorders are closed. Thank you.";
+      document.getElementById("notice").textContent = "Preorders closed · Thank you for supporting the first run";
+      setButtons(); return;
+    }
+    const d = Math.floor(ms/864e5); ms -= d*864e5;
+    const h = Math.floor(ms/36e5);  ms -= h*36e5;
+    const m = Math.floor(ms/6e4);   ms -= m*6e4;
+    const s = Math.floor(ms/1e3);
+    document.getElementById("d").textContent = pad(d);
+    document.getElementById("h").textContent = pad(h);
+    document.getElementById("m").textContent = pad(m);
+    document.getElementById("s").textContent = pad(s);
+    setTimeout(tick, 1000);
+  }
+  setButtons(); tick();
+})();
+</script>
+</body>
+</html>
