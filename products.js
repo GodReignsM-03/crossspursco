@@ -11,19 +11,19 @@ window.PRODUCTS = {
       name: "Men's Signature Tee", colorway: "Natural / Saddle Brown",
       fit: "Unisex classic fit · true to size", swatch: ["#efe8dc","#7a4a2a"],
       front: "0% 0%", back: "100% 0%", btn: "brown",
-      ship:   { "S": "https://square.link/u/MLanYXuk", "M": "https://square.link/u/ib1TqSZ3", "L": "https://square.link/u/WkoXIHCd",
-                "XL": "https://square.link/u/t0hYxBNj", "2XL": "https://square.link/u/JGAQe1z3", "3XL": "https://square.link/u/urkj5qJy" },
-      pickup: { "S": "https://square.link/u/Z8MNY4Q6", "M": "https://square.link/u/03FUp7c1", "L": "https://square.link/u/a6gsl8La",
-                "XL": "https://square.link/u/wBhiucX4", "2XL": "https://square.link/u/jodk1v4e", "3XL": "https://square.link/u/1ZbrIwVD" }
+      ship:   { "S": "https://square.link/u/f2SqTp3H", "M": "https://square.link/u/ials4hSd", "L": "https://square.link/u/NXUE4yIu",
+                "XL": "https://square.link/u/T4QxrV2N", "2XL": "https://square.link/u/pfRo3XqV", "3XL": "https://square.link/u/yGICyZp9" },
+      pickup: { "S": "https://square.link/u/IzSz9ePI", "M": "https://square.link/u/EGIgRIob", "L": "https://square.link/u/rnG8qsyQ",
+                "XL": "https://square.link/u/BT90r8XE", "2XL": "https://square.link/u/4mB0nTIG", "3XL": "https://square.link/u/wUaOXyYo" }
     },
     women: {
       name: "Women's Signature Tee", colorway: "Black / Turquoise",
       fit: "Unisex classic fit · most women size down one", swatch: ["#1a1715","#2bb3bf"],
       front: "0% 100%", back: "100% 100%", btn: "",
-      ship:   { "S": "https://square.link/u/GyudvhMF", "M": "https://square.link/u/KBSVi0y5", "L": "https://square.link/u/wt9ENLCw",
-                "XL": "https://square.link/u/PPJn99Pr", "2XL": "https://square.link/u/lEGGveta", "3XL": "https://square.link/u/Zs7Uwfcs" },
-      pickup: { "S": "https://square.link/u/vjlFdfTf", "M": "https://square.link/u/9rtUMHWi", "L": "https://square.link/u/18fsEWn6",
-                "XL": "https://square.link/u/A03bI95n", "2XL": "https://square.link/u/18caRCUs", "3XL": "https://square.link/u/e0vRNkcL" }
+      ship:   { "S": "https://square.link/u/lKlcjTvP", "M": "https://square.link/u/AiTkHPOA", "L": "https://square.link/u/IBlX5H1w",
+                "XL": "https://square.link/u/pWL3bidK", "2XL": "https://square.link/u/IRPc6vYS", "3XL": "https://square.link/u/0Cz9VXyd" },
+      pickup: { "S": "https://square.link/u/YLt5Z3wQ", "M": "https://square.link/u/J1nJVx6V", "L": "https://square.link/u/4IFT6jBR",
+                "XL": "https://square.link/u/OxHKhaTz", "2XL": "https://square.link/u/zhoOJVtL", "3XL": "https://square.link/u/1veM14f7" }
     }
   },
   sizes: ["S","M","L","XL","2XL","3XL"]
