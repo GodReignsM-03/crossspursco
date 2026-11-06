@@ -189,9 +189,13 @@
   let size = params.get("size");
 
   if (!item) { location.replace("index.html#shop"); return; }
-  if (Date.now() >= new Date(P.deadline).getTime()) {
+  if (Date.now() >= new Date(P.deadline).getTime() || item.soldOut) {
     document.getElementById("checkout").hidden = true;
     document.getElementById("closed").hidden = false;
+    if (item.soldOut) {
+      document.querySelector("#closed h1").textContent = `${item.name} is sold out`;
+      document.querySelector("#closed .sub").textContent = "Thank you to everyone who preordered. Every spot in the first run is claimed.";
+    }
     return;
   }
   if (!P.sizes.includes(size)) size = "";

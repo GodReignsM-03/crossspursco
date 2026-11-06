@@ -124,6 +124,8 @@
   .sizes button:hover{border-color:var(--saddle);color:var(--saddle)}
   .sizes button[aria-checked="true"]{background:var(--saddle);border-color:var(--saddle);color:var(--cream)}
   .sizes button:focus-visible{outline:2px solid var(--saddle);outline-offset:2px}
+  .sold-out .sizes button{opacity:.4;cursor:not-allowed;pointer-events:none}
+  .sold-out .media{filter:grayscale(.35)}
   .card-body .btn{margin-top:auto}
   .secure{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:24px;font-size:13px;color:#6b5f50;text-align:center}
 
@@ -229,7 +231,8 @@ const CONFIG = {
   contactEmail: "aldovjr03@gmail.com",      // swap for a brand inbox later
   heroLine: "",                             // short line under the tagline, in your own words. Hidden while empty.
   missionPledge: "",                        // e.g. "$5 from every shirt goes straight to the trip." DECIDE BEFORE LAUNCH
-  donateLink: "",                           // GoFundMe URL
+  donateLink: "https://gofund.me/65a05b6ed",   // GoFundMe: Missions Trip to Kenya
+  linktree: "https://linktr.ee/aldovjr03",
   products: Object.entries(PRODUCTS.items).map(([key, p]) => Object.assign({ key }, p))
 };
 </script>
@@ -368,6 +371,7 @@ const CONFIG = {
 
 <footer>
   <div class="wordmark">Cross Spurs Co.</div>
+  <div style="margin-top:8px"><a id="linktree" href="#" target="_blank" rel="noopener">Follow along</a> · <a id="gofund" href="#" target="_blank" rel="noopener">Support the Kenya trip</a></div>
   <div style="margin-top:8px">© 2026 Cross Spurs Co. · <a class="js-email" href="#"></a></div>
 </footer>
 
@@ -388,7 +392,9 @@ const CONFIG = {
   }
   if (CONFIG.donateLink){
     const d = document.getElementById("donate"); d.href = CONFIG.donateLink; d.hidden = false;
-  }
+    document.getElementById("gofund").href = CONFIG.donateLink;
+  } else { document.getElementById("gofund").remove(); }
+  if (CONFIG.linktree){ document.getElementById("linktree").href = CONFIG.linktree; }
 
   const sizes = ["S","M","L","XL","2XL","3XL"];
   const updaters = [];
@@ -398,7 +404,7 @@ const CONFIG = {
     card.className = "card";
     card.innerHTML = `
       <div class="media" role="img" aria-label="${p.name}, ${p.colorway}, front" style="background-position:${p.front}">
-        <span class="tag">Preorder</span>
+        <span class="tag">${p.soldOut ? "Sold Out" : "Preorder"}</span>
         <div class="views">
           <button type="button" aria-pressed="true" data-pos="${p.front}" data-v="front">Front</button>
           <button type="button" aria-pressed="false" data-pos="${p.back}" data-v="back">Back</button>
@@ -416,10 +422,12 @@ const CONFIG = {
     const update = () => {
       const s = card.dataset.size;
       if (isClosed()) { buy.textContent = "Preorders Closed"; buy.setAttribute("aria-disabled","true"); buy.href = "#"; }
+      else if (p.soldOut) { buy.textContent = "Sold Out"; buy.setAttribute("aria-disabled","true"); buy.href = "#"; }
       else if (!s) { buy.textContent = "Select a Size"; buy.setAttribute("aria-disabled","true"); buy.href = "#"; }
       else { buy.textContent = "Preorder"; buy.removeAttribute("aria-disabled"); buy.href = `checkout.html?item=${p.key}&size=${encodeURIComponent(s)}`; }
     };
     updaters.push(update);
+    if (p.soldOut) { card.classList.add("sold-out"); card.querySelectorAll(".sizes button").forEach(b => b.disabled = true); }
     card.querySelectorAll(".sizes button").forEach(b => b.addEventListener("click", () => {
       card.dataset.size = b.dataset.size;
       card.querySelectorAll(".sizes button").forEach(x => x.setAttribute("aria-checked", x === b));
