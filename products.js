@@ -7,6 +7,7 @@ window.PRODUCTS = {
   shippingFee: 6,
   pickupPlace: "McAllen or Edinburg, TX",
   limitPerShirt: 60,                        // max preorders per shirt (all sizes combined)
+  gateUrl: "",                              // Cloudflare checkpoint address. Empty = send buyers straight to Square.
   // To close a shirt: set soldOut: true on it below and publish. The card and checkout lock.
   items: {
     men: {

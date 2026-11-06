@@ -189,10 +189,11 @@
   let size = params.get("size");
 
   if (!item) { location.replace("index.html#shop"); return; }
-  if (Date.now() >= new Date(P.deadline).getTime() || item.soldOut) {
+  const soldOutNow = item.soldOut || params.get("soldout") === "1";
+  if (Date.now() >= new Date(P.deadline).getTime() || soldOutNow) {
     document.getElementById("checkout").hidden = true;
     document.getElementById("closed").hidden = false;
-    if (item.soldOut) {
+    if (soldOutNow) {
       document.querySelector("#closed h1").textContent = `${item.name} is sold out`;
       document.querySelector("#closed .sub").textContent = "Thank you to everyone who preordered. Every spot in the first run is claimed.";
     }
@@ -224,7 +225,7 @@
     $("ship-amt").textContent = ship ? money(ship) : "Free";
     $("total").textContent = money(P.price + ship);
     const link = size && item[method] && item[method][size];
-    if (link) { pay.href = link; pay.removeAttribute("aria-disabled"); pay.textContent = `Continue to Payment · ${money(P.price + ship)}`; }
+    if (link) { pay.href = P.gateUrl ? `${P.gateUrl}/go?item=${key}&to=${encodeURIComponent(link)}` : link; pay.removeAttribute("aria-disabled"); pay.textContent = `Continue to Payment · ${money(P.price + ship)}`; }
     else { pay.href = "#"; pay.setAttribute("aria-disabled", "true"); pay.textContent = "Select a Size"; }
     const u = new URL(location.href); if (size) u.searchParams.set("size", size); history.replaceState(null, "", u);
   }

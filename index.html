@@ -398,6 +398,7 @@ const CONFIG = {
 
   const sizes = ["S","M","L","XL","2XL","3XL"];
   const updaters = [];
+  const cardsByKey = {};
   const grid = document.getElementById("products");
   CONFIG.products.forEach(p => {
     const card = document.createElement("article");
@@ -440,9 +441,26 @@ const CONFIG = {
       card.querySelectorAll(".views button").forEach(x => x.setAttribute("aria-pressed", x === b));
     }));
     grid.appendChild(card);
+    cardsByKey[p.key] = { card, p, update };
   });
 
   function setButtons(){ updaters.forEach(u => u()); }
+
+  // Live sold-out status from the checkpoint (only when it's switched on).
+  if (PRODUCTS.gateUrl) {
+    fetch(`${PRODUCTS.gateUrl}/status`, { cache: "no-store" }).then(r => r.ok ? r.json() : null).then(s => {
+      if (!s) return;
+      Object.keys(cardsByKey).forEach(k => {
+        if (s[k] && s[k].soldOut) {
+          const { card, p, update } = cardsByKey[k];
+          p.soldOut = true; card.classList.add("sold-out");
+          card.querySelector(".tag").textContent = "Sold Out";
+          card.querySelectorAll(".sizes button").forEach(b => b.disabled = true);
+          update();
+        }
+      });
+    }).catch(() => {});
+  }
 
   const pad = n => String(n).padStart(2,"0");
   function tick(){
